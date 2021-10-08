@@ -53,8 +53,6 @@ def main() -> None:
     women_images = []
     men_images = []
 
-    detected = 0
-
     for image in images_paths:
         obj = DeepFace.analyze(img_path=image, actions=['gender', 'age'], enforce_detection=False)
         if obj['gender'] == 'Woman':
