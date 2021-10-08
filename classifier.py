@@ -68,10 +68,12 @@ def main() -> None:
         os.mkdir(MEN_OUTPUT_FOLDER)
 
     # sort the image dictionaries
+    print('sort women by age...')
     women_images.sort(key=operator.itemgetter(1))
-    men_images.sort(key=operator.itemgetter(1))
-
     copy_files(women_images, WOMEN_OUTPUT_FOLDER)
+
+    print('Sort men by age...')
+    men_images.sort(key=operator.itemgetter(1))
     copy_files(men_images, MEN_OUTPUT_FOLDER)
 
 
